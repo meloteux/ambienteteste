@@ -50,43 +50,11 @@ body::after {
 /* Estilo para o formulário */
 form {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
     border-radius: 10px;
     margin-top: 50px;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #6aff6a;
-    border-radius: 5px;
-    background-color: #0d0d0d;
-    color: #fff;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    width: 100%;
-    background-color: #6aff6a;
-    color: #000;
-    border: none;
-    padding: 15px 0;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #4ca64c;
-    }
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
