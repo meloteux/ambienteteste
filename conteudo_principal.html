@@ -3,24 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conteúdo Principal - Horas</title>
+    <title>Conteúdo Principal</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function displayTime() {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-
-        // Atualizar o tempo a cada segundo
-        setInterval(displayTime, 1000);
-    </script>
 </head>
 <body>
-    <h1>Horas Atuais</h1>
-    <div id="time"></div>
-    <div class="phrase">Já está na hora de mudar. Estamos em 2024. Vamos agir</div>
+    <div class="container">
+        <h1>Bem-vindo ao Conteúdo Principal!</h1>
+        <!-- Seu conteúdo principal aqui -->
+    </div>
 </body>
 </html>
