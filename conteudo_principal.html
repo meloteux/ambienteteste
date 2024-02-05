@@ -11,7 +11,26 @@
             const hours = now.getHours().toString().padStart(2, '0');
             const minutes = now.getMinutes().toString().padStart(2, '0');
             const seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+            const time = `${hours}:${minutes}:${seconds}`;
+
+            document.getElementById('time').textContent = time;
+
+            // Obter a frase
+            const phrase = "Já está na hora de mudar. Estamos em 2024. Vamos agir";
+
+            // Div para exibir a frase
+            const phraseContainer = document.getElementById('phrase');
+
+            // Limpar a frase anterior
+            phraseContainer.innerHTML = '';
+
+            // Exibir a frase, com cada letra piscando
+            for (let i = 0; i < time.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = phrase.charAt(i);
+                span.className = 'neon';
+                phraseContainer.appendChild(span);
+            }
         }
 
         // Atualizar o tempo a cada segundo
@@ -19,7 +38,7 @@
     </script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             background-color: #0d0d0d;
             color: #fff;
             margin: 0;
@@ -37,16 +56,29 @@
             margin-top: 20px;
         }
 
-        .phrase {
+        #phrase {
             font-size: 24px;
             margin-top: 20px;
+        }
+
+        .neon {
+            color: #39ff14;
+            animation: neon-animation 1s infinite alternate;
+        }
+
+        @keyframes neon-animation {
+            0% {
+                text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14;
+            }
+            100% {
+                text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14, 0 0 20px #39ff14;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Horas Atuais</h1>
     <div id="time"></div>
-    <div class="phrase">Já está na hora de mudar. Estamos em 2024. Vamos agir</div>
+    <div id="phrase" class="phrase"></div>
 </body>
-                        </html>
-                        
+</html>
