@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes</title>
+    <link rel="stylesheet" href="questoes.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Perguntas Frequentes</h1>
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(1)">
+                <p>Por que o céu é azul?</p>
+            </div>
+            <div class="answer" id="answer1">
+                <p>O céu é azul devido à dispersão da luz solar pelas moléculas de ar na atmosfera da Terra.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(2)">
+                <p>Qual é o sentido da vida, do universo e tudo mais?</p>
+            </div>
+            <div class="answer" id="answer2">
+                <p>De acordo com o livro "O Guia do Mochileiro das Galáxias", a resposta é 42.</p>
+            </div>
+        </div>
+        <!-- Adicione mais perguntas aqui -->
+    </div>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById('answer' + id);
+            answer.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
